@@ -28,7 +28,6 @@ Cache-Control: no-store
 Content-Type: text/html
 X-Frame-Options: sameorigin
 X-XSS-Protection: 1; mode=block
-
 {"result":"success"}%   
 ``
 
