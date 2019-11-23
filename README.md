@@ -15,15 +15,12 @@ Connect to the dongle wifi hotspot.
 2. (MAC/LINUX) On the terminal enter:
 
 ``
-
 curl -i --referer http://192.168.0.1/ "http://192.168.0.1/goform/goform_set_cmd_process?isTest=false&goformId=SET_DEVICE_MODE&debug_enable=1"
-
 ``
 
 You should recive something like this:
 
 ``
-
 HTTP/1.1 200 OK
 Server: WebServer-Webs
 Pragma: no-cache
@@ -33,7 +30,6 @@ X-Frame-Options: sameorigin
 X-XSS-Protection: 1; mode=block
 
 {"result":"success"}%   
-
 ``
 
 If you recieve a fail status, reboot your dongle and the last step again try again.
