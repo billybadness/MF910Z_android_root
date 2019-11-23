@@ -4,6 +4,10 @@ Root for ZTE MF910Z (Telstra 4GX WiFi Dongle/Modem)
 ### Disclaimer
 I am not responsible for your device or anything that may happen to your device. By following these steps, you accept full responsibility for your device and are aware that these steps may void any standing warranties.
 
+## Requirements
+
+- Abd tools
+
 ## Step 1 - Prepare your device
 
 Connect to the dongle wifi hotspot.
@@ -32,3 +36,27 @@ X-XSS-Protection: 1; mode=block
 ``
 
 If you recieve a fail status, reboot your dongle and the last step again try again.
+
+## Step 2 - Welcome home
+
+1. Mount the ``/`` volume as read/write
+
+``
+mount -o remount,rw /
+``
+
+2. Change root password
+``passwd root``
+
+3. Add user account
+``adduser -s /bin/sh -S (username)``
+
+``passwd (username)``
+
+4. Allow ssh through firewall
+``iptables -t filter -I INPUT -p tcp --dport 22 -j ACCEPT``
+
+``iptables -t filter -I INPUT -p udp --dport 22 -j ACCEPT ``
+
+
+
